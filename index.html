@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>milasahil</title>
+    <title>Marriage Proposal</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -169,6 +169,13 @@
             margin-top: 20px;
         }
 
+        /* Make "Our Memories" Section Scrollable */
+        .memories-section {
+            max-height: 400px; /* Set a maximum height */
+            overflow-y: auto; /* Allow vertical scrolling */
+            padding: 20px;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
@@ -198,6 +205,10 @@
             .footer-text {
                 font-size: 0.8rem;
             }
+
+            .memories-section {
+                max-height: 300px; /* Adjust max height for mobile screens */
+            }
         }
 
         @media (max-width: 480px) {
@@ -226,6 +237,10 @@
 
             .footer-text {
                 font-size: 0.7rem;
+            }
+
+            .memories-section {
+                max-height: 250px; /* Further adjustment for small screens */
             }
         }
     </style>
@@ -258,9 +273,7 @@
         <div class="letter-content">
             <p>I’ve been thinking about how lucky I am to have you in my life, and I wanted to take a moment to share just a few of the reasons why. Every day, I find myself more grateful for your love, your kindness, and your incredible ability to make everything feel a little brighter just by being you.</p>
             <p>There’s something about the way you look at me, like I’m the most important person in the room, and it fills my heart with warmth. The way you laugh, the way you care, and the way you always seem to know how to make me feel better even on my toughest days—those are just a few of the things that make me fall even deeper in love with you.</p>
-            <p>I cherish all the little moments we share—the quiet conversations, the inside jokes, the simple times we’re just together. Even in silence, I feel connected to you, like we’re on the same wavelength, and that’s something I’ve never experienced before.</p>
-            <p>Thank you for being so patient, for listening when I need to talk, and for supporting me when I need encouragement. You bring out the best in me, and with you by my side, I feel like I can take on anything life throws our way.</p>
-            <p>I love you more than I have words to express, and I’m so thankful for the bond we’ve created together. Every day with you is a gift, and I look forward to many more memories together. I hope this letter reminds you of how much you mean to me.</p>
+            <p>I cherish all the little moments we share—the quiet conversations, the inside jokes, the simple times we’re just together, and all the memories we’ve already made. You are a gift, and I look forward to many more memories together. I hope this letter reminds you of how much you mean to me.</p>
             <p>Forever yours,</p>
             <p><b>Milanika</b></p>
         </div>
@@ -268,7 +281,7 @@
     </div>
 
     <!-- Our Memories Section -->
-    <div class="container section" id="memoriesSection" style="overflow-y: auto;">
+    <div class="container section memories-section" id="memoriesSection">
         <h1>Our Memories</h1>
         <div class="image-gallery">
             <img src="lipi.jpg" alt="Memory 1" onclick="openModal('lipi.jpg')">
@@ -297,7 +310,7 @@
 
         function answerNo() {
             const response = document.getElementById('response');
-            response.innerHTML = ' I know you Love me baby';
+            response.innerHTML = 'I know you love me baby';
             setTimeout(() => {
                 response.innerHTML = '';
                 nextSection('mainSection');
@@ -325,4 +338,5 @@
     </script>
 </body>
 </html>
+
 

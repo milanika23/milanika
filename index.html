@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geluuu</title>
+    <title>Marriage Proposal</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -24,7 +24,7 @@
             position: relative;
             color: #fff;
             text-align: center;
-            overflow-y: auto; /* Added for scrolling */
+            overflow: hidden; /* Prevent scrolling of the whole page */
         }
 
         .overlay {
@@ -46,7 +46,7 @@
             width: 100%;
             max-width: 700px;
             transition: transform 0.3s ease;
-            display: none; /* Hidden by default */
+            display: none;
         }
 
         .container.active {
@@ -158,7 +158,7 @@
 
         .gif-container img {
             max-width: 100%;
-            max-height: 300px; /* Resize the Hurray sticker */
+            max-height: 300px;
             object-fit: contain;
         }
 
@@ -182,6 +182,8 @@
 
             .container {
                 padding: 20px;
+                max-width: 90%;
+                margin: auto;
             }
 
             .letter-content {
@@ -210,6 +212,7 @@
 
             .container {
                 padding: 15px;
+                max-width: 100%;
             }
 
             .letter-content {
@@ -219,6 +222,10 @@
 
             .image-gallery {
                 grid-template-columns: 1fr;
+            }
+
+            .footer-text {
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -253,11 +260,11 @@
             <p>There’s something about the way you look at me, like I’m the most important person in the room, and it fills my heart with warmth. The way you laugh, the way you care, and the way you always seem to know how to make me feel better even on my toughest days—those are just a few of the things that make me fall even deeper in love with you.</p>
             <p>I cherish all the little moments we share—the quiet conversations, the inside jokes, the simple times we’re just together. Even in silence, I feel connected to you, like we’re on the same wavelength, and that’s something I’ve never experienced before.</p>
             <p>Thank you for being so patient, for listening when I need to talk, and for supporting me when I need encouragement. You bring out the best in me, and with you by my side, I feel like I can take on anything life throws our way.</p>
-            <p>I love you more than I have words to express, and I’m so thankful for the bond we’ve created together. Every day with you is a gift, and I can’t wait for all the adventures, laughter, and love that the future holds for us.</p>
-            <p>Your wife,</p>
-            <p>Milanika</p>
+            <p>I love you more than I have words to express, and I’m so thankful for the bond we’ve created together. Every day with you is a gift, and I look forward to many more memories together. I hope this letter reminds you of how much you mean to me.</p>
+            <p>Forever yours,</p>
+            <p><b>Your Handpump</b></p>
         </div>
-        <button onclick="nextSection('memoriesSection')">See Our Memories</button>
+        <button onclick="nextSection('memoriesSection')" class="memoriesBtn">See Our Memories</button>
     </div>
 
     <!-- Our Memories Section -->
@@ -318,3 +325,4 @@
     </script>
 </body>
 </html>
+

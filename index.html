@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marriage Proposal</title>
+    <title>Geluuu</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -19,13 +19,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            padding: 0;
+            height: 100vh;
+            padding: 20px;
             position: relative;
             color: #fff;
             text-align: center;
-            overflow-x: hidden;
-            overflow-y: auto; /* Allow scrolling */
+            overflow-y: auto; /* Added for scrolling */
         }
 
         .overlay {
@@ -262,7 +261,7 @@
     </div>
 
     <!-- Our Memories Section -->
-    <div class="container section" id="memoriesSection">
+    <div class="container section" id="memoriesSection" style="overflow-y: auto;">
         <h1>Our Memories</h1>
         <div class="image-gallery">
             <img src="lipi.jpg" alt="Memory 1" onclick="openModal('lipi.jpg')">
@@ -274,41 +273,47 @@
         </div>
     </div>
 
-    <!-- Modal for Image Gallery -->
+    <!-- Modal -->
     <div class="modal" id="modal" onclick="closeModal()">
-        <img id="modalImage" src="" alt="Memory Image">
+        <img src="" id="modalImage" alt="Memory">
     </div>
 
-    <div class="footer-text">
-        Made by Milanika only for Sahil
-    </div>
+    <div class="footer-text">Created with love for Milanika</div>
 
     <script>
         function nextSection(sectionId) {
-            document.querySelector('.section.active').classList.remove('active');
-            document.getElementById(sectionId).classList.add('active');
-        }
-
-        function moveNoButton() {
-            var noButton = document.getElementById('noBtn');
-            var x = Math.random() * 80;
-            var y = Math.random() * 80;
-            noButton.style.transform = `translate(${x}px, ${y}px)`;
+            const currentSection = document.querySelector('.container.active');
+            currentSection.classList.remove('active');
+            const nextSection = document.getElementById(sectionId);
+            nextSection.classList.add('active');
         }
 
         function answerNo() {
-            document.getElementById('response').textContent = 'Haha, you can\'t escape! You love me!';
+            const response = document.getElementById('response');
+            response.innerHTML = 'Oh no! 😢';
+            setTimeout(() => {
+                response.innerHTML = '';
+                nextSection('mainSection');
+            }, 2000);
+        }
+
+        function moveNoButton() {
+            const noButton = document.getElementById('noBtn');
+            const randomX = Math.random() * 200 - 100;
+            const randomY = Math.random() * 200 - 100;
+            noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
         }
 
         function openModal(imageSrc) {
-            var modal = document.getElementById('modal');
-            var modalImage = document.getElementById('modalImage');
-            modalImage.src = imageSrc;
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
             modal.style.display = 'flex';
+            modalImage.src = imageSrc;
         }
 
         function closeModal() {
-            document.getElementById('modal').style.display = 'none';
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
         }
     </script>
 </body>
